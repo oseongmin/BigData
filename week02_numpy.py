@@ -13,4 +13,4 @@ l = [random.randint(1, 100) for i in range(num)]
 
 v = np.array(l, dtype='int16')
 print(v)
-print(v, v.ndim, v.data, v.dtype, v.strides)
+#print(v, v.ndim, v.data, v.dtype, v.strides)
