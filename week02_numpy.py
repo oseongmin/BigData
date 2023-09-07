@@ -9,9 +9,8 @@ import random
 #print(v.ndim, v.shape, v.data, v.dtype, v.strides)
 #print(v)
 num = int(input("변수 입력 : "))
-l = list()
-for i in range(num):
-	l.append(random.randint(1, 100))
+l = [random.randint(1, 100) for i in range(num)]
 
 v = np.array(l, dtype='int16')
+print(v)
 print(v, v.ndim, v.data, v.dtype, v.strides)
