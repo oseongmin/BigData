@@ -9,6 +9,7 @@ def click_button():
         c = int(en_column.get())
 
         rows = list()
+        #rows = ([random.randint(1, 100) for i in range(r)] for i in range(c))
         for i in range(c):
             rows.append([random.randint(1, 100) for i in range(r)])
 #        row = [random.randint(1, 100) for i in range(r)]
