@@ -2,8 +2,11 @@ import numpy as np
 import tkinter as tk
 from tkinter import messagebox
 
+def press_enter_key(ev):
+    click_button()
+    #messagebox.showinfo('cordinate value', f"{ev.x}, {ev.y}")
 
-def click_button(ev):
+def click_button():
     try:
         r, c = map(int, en_row_column.get().split())
         matrix = np.random.randint(1, 101, size=(r, c))
@@ -13,7 +16,7 @@ def click_button(ev):
 
 
 window = tk.Tk()
-window.title('numpy gui version v1.6')
+window.title('numpy gui version v1.7')
 window.geometry('300x150')
 
 # create widget
