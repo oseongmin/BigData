@@ -1,7 +1,6 @@
-# import matplotlib.pyplot as plt
 import pandas as pd
 import tkinter as tk
-from sklearn.linear_model import LinearRegression
+import smrun
 
 
 def predict_life_satisfaction():
@@ -12,11 +11,7 @@ def predict_life_satisfaction():
     X = life_satisfaction[["GDP per capita (USD)"]].values  # return 2d array
     y = life_satisfaction[["Life satisfaction"]].values  # return 2d array
 
-    # life_satisfaction.plot(kind='scatter', grid=True, x="GDP per capita (USD)", y="Life satisfaction")
-    # plt.axis([23500, 62500, 4, 9])
-    # plt.show()
-
-    model = LinearRegression()
+    model = smrun.LinearRegression()
     model.fit(X, y)
 
     # predict new GDP per capita (South Korea 2020)
@@ -25,7 +20,7 @@ def predict_life_satisfaction():
 
 if __name__ == "__main__":
     window = tk.Tk()
-    window.title("삶의 만족도 예측 프로그램 v0.1")
+    window.title("삶의 만족도 예측 프로그램 v0.2")
     window.geometry("400x150")
 
     lbl_life_satisfaction = tk.Label(window, text="아래 입력상자에 삶의 만족도를 알고 싶은\n국가의 1인당 GDP값을 입력해주세요")
